@@ -1,0 +1,48 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #1c1e21;
+  }
+  
+  .header {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .header.dark-mode {
+    background-color: #000;
+  }
+  
+  .footer {
+    background-color: #3b5998;
+    color: white;
+    padding: 10px 0;
+  }
+  
+  .footer.dark-mode {
+    background-color: #000;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dark-mode .container {
+    background-color: #242526;
+    color: #e4e6eb;
+  }
+  
+  .dark-mode .form-control {
+    background-color: #3a3b3c;
+    color: #e4e6eb;
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #444;
+    border-color: #444;
+  }
+  
