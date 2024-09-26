@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code Generator</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body.dark-mode {
+      background-color: #121212;
+      color: #ffffff;
+    }
+
+    .dark-mode .form-control {
+      background-color: #333;
+      color: #fff;
+    }
+
+    .dark-mode .btn-primary {
+      background-color: #444;
+      border-color: #444;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="bg-light p-3">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1>QR Code Generator</h1>
+      <button id="toggleDarkMode" class="btn btn-secondary">Toggle Dark Mode</button>
+    </div>
+  </header>
+  <div class="container mt-5">
+    <form id="qrForm" class="mt-4">
+      <div class="form-group">
+        <label for="accountNumber">Enter the account number:</label>
+        <input type="text" class="form-control" id="accountNumber" required>
+        <div class="invalid-feedback">Account number must be numeric and between 14 to 21 digits.</div>
+      </div>
+      <div class="form-group">
+        <label for="accountHolderName">Enter the name of account holder:</label>
+        <input type="text" class="form-control" id="accountHolderName" required>
+        <div class="invalid-feedback">Account holder name must be alphabetic and in uppercase.</div>
+      </div>
+      <div class="form-group">
+        <label for="bankCode">Select the bank:</label>
+        <select class="form-control" id="bankCode" required></select>
+      </div>
+      <div class="form-group">
+        <label for="qrType">Choose QR type:</label>
+        <select class="form-control" id="qrType" required>
+          <option value="1">Fonepay QR</option>
+          <option value="2">ConnectIPS QR</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="filename">Enter a filename to save the QR code (e.g., myqrcode.png):</label>
+        <input type="text" class="form-control" id="filename" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Generate QR Code</button>
+    </form>
+    <div class="mt-4" id="qrcode"></div>
+  </div>
+  <footer class="bg-light p-3 text-center mt-5">
+    © Rijal Shyam 2024
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>
