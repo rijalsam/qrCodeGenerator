@@ -7,11 +7,16 @@ body {
   .header {
     background-color: #3b5998;
     color: white;
-    padding: 10px 0;
+    
+  }
+  
+  .header h1 {
+    color: black; /* Ensure the heading is always white */
   }
   
   .header.dark-mode {
     background-color: #000;
+    color: aliceblue;
   }
   
   .footer {
