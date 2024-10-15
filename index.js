@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Validation
         const accountNumberValid = /^\d{14,21}$/.test(accountNumber);
-        const accountHolderNameValid = /^[A-Z\s]+$/.test(accountHolderName);
+        //const accountHolderNameValid = /^[A-Z\s]+$/.test(accountHolderName);
 
         if (!accountNumberValid) {
             document.getElementById('accountNumber').classList.add('is-invalid');
